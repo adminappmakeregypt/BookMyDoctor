@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookMyDoctor</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    input, select, button {
+      margin: 5px;
+      padding: 8px;
+      display: block;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ HEADER -->
+  <h1>BookMyDoctor</h1>
+
+  <!-- ✅ LOGOUT -->
+  <button onclick="logout()">🚪 Logout</button>
+
+  <hr>
+
+  <!-- ✅ BOOKING FORM -->
+  <h2>Add Booking</h2>
+
+  <input type="text" id="fullName" placeholder="Full Name">
+  <input type="tel" id="phone" placeholder="Phone">
+
+  <input type="date" id="appointmentDate">
+  <input type="time" id="appointmentTime">
+
+  <select id="doctor">
+    <option value="">Select Doctor</option>
+    <option value="Dr Ahmed">Dr Ahmed</option>
+    <option value="Dr Ali">Dr Ali</option>
+  </select>
+
+  <select id="paymentMethod">
+    <option value="cash">Cash</option>
+    <option value="instapay">Instapay</option>
+  </select>
+
+  <select id="status">
+    <option value="confirmed">Confirmed</option>
+    <option value="pending">Pending</option>
+  </select>
+
+  <button id="saveBtn">💾 Save Booking</button>
+
+  <hr>
+
+  <!-- ✅ BOOKINGS TABLE -->
+  <h2>Bookings</h2>
+
+  <table id="bookingsTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Doctor</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Payment</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- ✅ MAIN SCRIPT -->
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
+``
